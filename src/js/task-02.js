@@ -16,3 +16,20 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+const ingredientsEl = document.querySelector('#ingredients')
+console.log(ingredientsEl)
+
+const itemsEl = ingredients.map((ingredient) => {
+  
+  const itemEl = document.createElement('li')
+ 
+  itemEl.textContent = ingredient
+  return itemEl
+})
+
+ingredientsEl.append(...itemsEl)
+
+
+
+
+
