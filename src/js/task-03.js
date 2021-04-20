@@ -28,14 +28,23 @@ const images = [
 
 const galleryEl = document.querySelector('#gallery')
 galleryEl.style.display = 'flex'
-
-
 console.log(galleryEl)
 
 
-const imageEl = images.map((image) => {
-  
-  
-  galleryEl.insertAdjacentHTML('afterbegin',`<li><img src=${image.url} alt=${image.alt} width=640 height=400 ></li>`)
-  
-})
+
+const makeImage = ({ url, alt }) => {
+    return `
+<li>
+<img src= ${url} alt= "${alt}" width = 640 height = 400>
+</li>
+    `
+}
+
+const itemsList = images.map(makeImage).join('')
+galleryEl.insertAdjacentHTML('afterbegin', itemsList)
+console.log(itemsList)
+
+
+
+
+
