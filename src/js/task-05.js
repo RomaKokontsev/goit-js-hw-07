@@ -6,5 +6,9 @@ const outputEl = document.querySelector('#name-output')
 console.log(inputEl)
 console.log(outputEl)
 inputEl.addEventListener('input', function (event) {
+    if (inputEl.value === '') {
+       return outputEl.textContent = 'незнакомец'
+    }
+
     outputEl.textContent = event.currentTarget.value;
 })

@@ -32,6 +32,7 @@ galleryEl.style.display = 'flex'
 
 console.log(galleryEl)
 
+
 const imageEl = images.map((image) => {
   
   
