@@ -20,7 +20,8 @@ const itemsRef = categorRef.querySelectorAll('.item')
 itemsRef.forEach(nameItem =>
     
     console.log(`- Категория: ${nameItem.firstElementChild.textContent}
-    - Количество элементов ${nameItem.lastElementChild.children.length}`))
+    - Количество элементов ${nameItem.lastElementChild.children.length}`)
+)
 
 
 

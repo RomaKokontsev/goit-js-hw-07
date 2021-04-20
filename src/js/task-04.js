@@ -15,9 +15,10 @@ const counter = {
 
 
 
-const counterRef = document.querySelectorAll('#counter button')
-const decrementBtn = counterRef[0]
-const incrementBtn = counterRef[1]
+
+const decrementBtn = document.querySelector('[data-action="decrement"]')
+console.log(decrementBtn)
+const incrementBtn = document.querySelector('[data-action="increment"]')
 
 const counterValue = document.querySelector('#value')
 
